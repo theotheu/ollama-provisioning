@@ -2,6 +2,7 @@
 
 DEBIAN_FRONTEND=noninteractive  
 REPO=ollama-provisioning
+PENV=tutorial-env
 
 T=21:36
 
@@ -9,7 +10,10 @@ echo "--- ${T}"
 
 sudo apt update
 
-sudo apt install git python-is-python3 python3-pip
+sudo apt install git python-is-python3 python3-pip install python3.10-venv
+
+python -m venv ${PENV}
+source ${PENV}/bin/activate
 
 pip install ansible
 
