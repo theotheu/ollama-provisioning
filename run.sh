@@ -11,7 +11,7 @@ sudo apt install git python-is-python3 python3-pip
 rm -fr ansible_quickstart
 mkdir ansible_quickstart && cd ansible_quickstart
 
-
+echo "--- 21:18"
 exit
 
 
