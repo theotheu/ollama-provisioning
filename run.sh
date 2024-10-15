@@ -3,7 +3,7 @@
 DEBIAN_FRONTEND=noninteractive  
 REPO=ollama-provisioning
 
-T=21:18
+T=21:36
 
 echo "--- ${T}"
 
@@ -14,6 +14,7 @@ sudo apt install git python-is-python3 python3-pip
 pip install ansible
 
 cd ~
+rm -fr code
 mkdir -p code
 cd code
 git clone https://github.com/theotheu/${REPO}.git
