@@ -5,7 +5,7 @@ REPO=ollama-provisioning
 PENV=tutorial-env
 CODE=code
 
-T=21:36
+T=21:43
 
 echo "--- ${T}"
 rm -fr ${PENV}
