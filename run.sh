@@ -2,27 +2,11 @@
 
 DEBIAN_FRONTEND=noninteractive  
 
-sudo apt-get update && sudo apt-get install make build-essential libssl-dev \
-    zlib1g-dev libbz2-dev libreadline-dev libsqlite3-dev wget curl llvm \
-    libncursesw5-dev xz-utils tk-dev libxml2-dev libxmlsec1-dev libffi-dev liblzma-dev \
-    git
+sudo apt update
 
-curl https://pyenv.run | bash
+sudo apt install git
 
-# Load pyenv automatically by appending
-# the following to 
-# ~/.bash_profile if it exists, otherwise ~/.profile (for login shells)
-# and ~/.bashrc (for interactive shells) :
- 
-export PYENV_ROOT="$HOME/.pyenv"
-[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
-eval "$(pyenv init -)"
-
-eval "$(pyenv virtualenv-init -)"
-
-source ~/.bashrc
-
-pyenv install-latest
+sudo apt install python-is-python3
 
 exit
 
