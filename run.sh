@@ -7,7 +7,7 @@ CODE=code
 
 timedatectl set-timezone Europe/Amsterdam
 
-T=22:16
+T=22:19
 
 echo "--- ${T}"
 rm -fr ${PENV}
