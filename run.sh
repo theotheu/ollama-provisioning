@@ -5,7 +5,7 @@ REPO=ollama-provisioning
 PENV=pyenv
 CODE=code
 
-T=21:56
+T=22:02
 
 echo "--- ${T}"
 rm -fr ${PENV}
