@@ -21,12 +21,12 @@ cd ~
 mkdir -p ${CODE}
 cd ${CODE}
 
-echo "##### Creating venv for Ansible"
+echo "##### Creating venv for Ansible `pwd`" 
 python -m venv ${PENV}
 pip install ansible
 source ${PENV}/bin/activate
 
-echo "##### Cloning repo ${REPO}"
+echo "##### Cloning repo ${REPO} into `pwd`"
 git clone https://github.com/theotheu/${REPO}.git
 # just to make sure that latest commits are used
 cd ${REPO}
