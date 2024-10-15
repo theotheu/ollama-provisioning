@@ -10,13 +10,12 @@ timedatectl set-timezone Europe/Amsterdam
 T=22:19
 
 echo "##### --- ${T}"
-rm -fr ${PENV}
 rm -fr ${CODE}
 
 sudo apt update
 sudo apt install git python-is-python3 python3-pip python3.10-venv
 
-pip install ansible
+
 
 cd ~
 mkdir -p ${CODE}
@@ -24,6 +23,7 @@ cd ${CODE}
 
 echo "##### Creating venv for Ansible"
 python -m venv ${PENV}
+pip install ansible
 source ${PENV}/bin/activate
 
 echo "##### Cloning repo ${REPO}"
