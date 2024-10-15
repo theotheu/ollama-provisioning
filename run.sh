@@ -5,7 +5,7 @@ REPO=ollama-provisioning
 PENV=pyenv
 CODE=code
 
-T=22:05
+T=22:07
 
 echo "--- ${T}"
 rm -fr ${PENV}
@@ -16,7 +16,6 @@ sudo apt install git python-is-python3 python3-pip python3.10-venv
 
 python -m venv ${PENV}
 source ${PENV}/bin/activate
-exit
 
 pip install ansible
 
