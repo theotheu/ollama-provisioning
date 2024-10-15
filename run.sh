@@ -26,16 +26,19 @@ echo "Creating venv for Ansible"
 python -m venv ${PENV}
 source ${PENV}/bin/activate
 
+echo "Cloning repo ${REPO}"
 git clone https://github.com/theotheu/${REPO}.git
 # just to make sure that latest commits are used
 cd ${REPO}
 git fetch --all && git reset --hard && git pull origin master
+
 cd ansible
 
 echo "--- ${T}"
 
 ANSIBLE_PYTHON_INTERPRETER=auto_silent
 
+echo "Running Ansible provisioning script"
 ansible-playbook local.yml  --connection=local -vvvv
 
 
