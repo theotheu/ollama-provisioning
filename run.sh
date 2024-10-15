@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 
 DEBIAN_FRONTEND=noninteractive  
+REPO=ollama-provisioning
 
 T=21:18
 
@@ -11,6 +12,15 @@ sudo apt update
 sudo apt install git python-is-python3 python3-pip
 
 pip install ansible
+
+cd ~
+mkdir -p code
+cd code
+git clone https://github.com/theotheu/${REPO}.git
+# just to make sure that latest commits are used
+cd ${REPO}
+git fetch --all && git reset --hard && git pull origin master
+cd ansible
 
 echo "--- ${T}"
 
