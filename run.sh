@@ -12,6 +12,7 @@ sudo apt update
 
 sudo apt install git python-is-python3 python3-pip install python3.10-venv
 
+rm -fr ${PENV}
 python -m venv ${PENV}
 source ${PENV}/bin/activate
 
@@ -19,6 +20,7 @@ pip install ansible
 
 cd ~
 rm -fr code
+
 mkdir -p code
 cd code
 git clone https://github.com/theotheu/${REPO}.git
