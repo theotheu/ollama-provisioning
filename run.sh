@@ -32,9 +32,13 @@ git clone https://github.com/theotheu/${REPO}.git
 cd ${REPO}
 git fetch --all && git reset --hard && git pull origin master
 
+echo "##### --- ${T}"
+echo "##### vvvvv"
+ls -l
+echo "##### ^^^^^"
 cd ${CODE}/${REPO}/ansible/
 
-echo "##### --- ${T}"
+
 
 ANSIBLE_PYTHON_INTERPRETER=auto_silent
 
