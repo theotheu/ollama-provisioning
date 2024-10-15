@@ -19,7 +19,7 @@ sudo apt install git python-is-python3 python3-pip python3.10-venv
 
 cd ~
 mkdir -p ${CODE}
-cd ${CODE}
+cd ~/${CODE}
 
 echo "##### Creating venv for Ansible `pwd`" 
 python -m venv ${PENV}
@@ -31,12 +31,12 @@ git clone https://github.com/theotheu/${REPO}.git
 # just to make sure that latest commits are used
 git fetch --all && git reset --hard && git pull origin master
 
-cd ${REPO}
+cd ~/${CODE}/${REPO}
 echo "##### --- ${T}"
 echo "##### vvvvv"
 ls -l
 echo "##### ^^^^^"
-cd ${CODE}/${REPO}/ansible/
+cd ~/${CODE}/${REPO}/ansible/
 
 
 
