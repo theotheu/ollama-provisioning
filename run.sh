@@ -2,12 +2,12 @@
 
 DEBIAN_FRONTEND=noninteractive  
 REPO=ollama-provisioning
-PENV=ansible_env
+PENV=pyenv_ansible
 CODE=code
 
 timedatectl set-timezone Europe/Amsterdam
 
-T=22:38
+T=22:45
 
 echo "##### --- ${T}"
 rm -fr ${CODE}
