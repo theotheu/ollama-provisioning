@@ -5,14 +5,14 @@ REPO=ollama-provisioning
 PENV=my_pyenv
 CODE=code
 
-T=21:48
+T=21:43
 
 echo "--- ${T}"
 rm -fr ${PENV}
 rm -fr ${CODE}
 
-apt update
-apt install git python-is-python3 python3-pip install 
+sudo apt update
+sudo apt install git python-is-python3 python3-pip python3.10-venv
 
 exit
 
