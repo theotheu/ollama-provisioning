@@ -3,26 +3,27 @@
 DEBIAN_FRONTEND=noninteractive  
 REPO=ollama-provisioning
 PENV=tutorial-env
+CODE=code
 
 T=21:36
 
 echo "--- ${T}"
+rm -fr ${PENV}
+rm -fr ${CODE}
 
 sudo apt update
-
 sudo apt install git python-is-python3 python3-pip install python3.10-venv
 
-rm -fr ${PENV}
+exit
+
 python -m venv ${PENV}
 source ${PENV}/bin/activate
 
 pip install ansible
 
 cd ~
-rm -fr code
-
-mkdir -p code
-cd code
+mkdir -p ${CODE}
+cd ${CODE}
 git clone https://github.com/theotheu/${REPO}.git
 # just to make sure that latest commits are used
 cd ${REPO}
