@@ -1,6 +1,9 @@
 #!/usr/bin/env bash
 
 DEBIAN_FRONTEND=noninteractive  
+T=21:18
+
+echo "--- ${T}"
 
 sudo apt update
 
@@ -9,9 +12,9 @@ sudo apt install git python-is-python3 python3-pip
 # pip install ansible
 
 rm -fr ansible_quickstart
-mkdir ansible_quickstart && cd ansible_quickstart
+mkdir -p ansible_quickstart && cd ansible_quickstart
 
-echo "--- 21:18"
+echo "--- ${T}"
 exit
 
 
