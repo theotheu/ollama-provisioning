@@ -7,7 +7,7 @@ CODE=code
 
 timedatectl set-timezone Europe/Amsterdam
 
-T=22:07
+T=22:16
 
 echo "--- ${T}"
 rm -fr ${PENV}
@@ -15,7 +15,6 @@ rm -fr ${CODE}
 
 sudo apt update
 sudo apt install git python-is-python3 python3-pip python3.10-venv
-
 
 pip install ansible
 
