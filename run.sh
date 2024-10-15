@@ -38,7 +38,7 @@ echo "##### --- ${T}"
 
 ANSIBLE_PYTHON_INTERPRETER=auto_silent
 
-echo "##### Running Ansible provisioning script"
+echo "##### Running Ansible provisioning script from `pwd`"
 ansible-playbook local.yml  --connection=local -vvvv
 
 
