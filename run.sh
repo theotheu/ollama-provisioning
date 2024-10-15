@@ -2,7 +2,7 @@
 
 DEBIAN_FRONTEND=noninteractive  
 REPO=ollama-provisioning
-PENV=pyenv
+PENV=ansible_env
 CODE=code
 
 timedatectl set-timezone Europe/Amsterdam
@@ -22,6 +22,7 @@ cd ~
 mkdir -p ${CODE}
 cd ${CODE}
 
+echo "Creating venv for Ansible"
 python -m venv ${PENV}
 source ${PENV}/bin/activate
 
