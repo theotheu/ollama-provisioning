@@ -32,7 +32,7 @@ git clone https://github.com/theotheu/${REPO}.git
 cd ${REPO}
 git fetch --all && git reset --hard && git pull origin master
 
-cd ${CODE}/${REPO}/ansible
+cd ${CODE}/${REPO}/ansible/
 
 echo "##### --- ${T}"
 
