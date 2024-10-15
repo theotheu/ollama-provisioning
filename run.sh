@@ -5,6 +5,8 @@ REPO=ollama-provisioning
 PENV=pyenv
 CODE=code
 
+timedatectl set-timezone Europe/Amsterdam
+
 T=22:07
 
 echo "--- ${T}"
