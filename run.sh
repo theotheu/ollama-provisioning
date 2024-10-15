@@ -6,6 +6,11 @@ sudo apt update
 
 sudo apt install git python-is-python3
 
+pip install ansible
+
+mkdir ansible_quickstart && cd ansible_quickstart
+
+
 exit
 
 
