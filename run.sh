@@ -4,9 +4,7 @@ DEBIAN_FRONTEND=noninteractive
 
 sudo apt update
 
-sudo apt install git
-
-sudo apt install python-is-python3
+sudo apt install git python-is-python3
 
 exit
 
