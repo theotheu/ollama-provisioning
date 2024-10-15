@@ -8,6 +8,7 @@ sudo apt install git python-is-python3 python3-pip
 
 # pip install ansible
 
+rm -fr ansible_quickstart
 mkdir ansible_quickstart && cd ansible_quickstart
 
 
