@@ -2,7 +2,7 @@
 
 DEBIAN_FRONTEND=noninteractive  
 REPO=ollama-provisioning
-PENV=my_pyenv
+PENV=pyenv
 CODE=code
 
 T=21:49
