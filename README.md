@@ -15,7 +15,8 @@ See README in vagrant directory and ansible directory.
 https://medium.com/@JleeCloudEngineer/how-to-install-nginx-using-ansible-playbook-on-ubuntu-vm-to-display-custom-html-page-fe8e7be4b1bc
 
 ## letsencrypt
-https://levelup.gitconnected.com/lets-encrypt-with-ansible-6406579baabd
+- https://levelup.gitconnected.com/lets-encrypt-with-ansible-6406579baabd
+- https://github.com/coopdevs/certbot_nginx
 
 ## Ollama
 https://www.server-world.info/en/note?os=Ubuntu_22.04&p=ollama&f=1
