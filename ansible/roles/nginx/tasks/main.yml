@@ -50,6 +50,6 @@
     backup=yes
 
 - name: Restart Nginx
-    service:
-      name: nginx
-      state: restarted
+  service:
+    name: nginx
+    state: restarted
