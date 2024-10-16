@@ -22,6 +22,9 @@ server_timezone: Europe/Amsterdam
 # Locale
 locale: en_US.UTF-8
 
+# Ollama model
+model: llama3:8b
+
 #####################
 #
 # Hardening 

@@ -1,54 +1,32 @@
 ---
 
-- name: Set timezone
-  timezone:
-    name: "{{ server_timezone }}"
+- hosts: all
+  become: true
+  tasks:
+    - name: Install Nginx
+      apt:
+        name: nginx
+        state: present
 
-- name: Set locale languages
-  locale_gen: name=en_US.UTF-8
+- name: Enable default Nginx website
+      file:
+        src: /etc/nginx/sites-available/default
+        path: /etc/nginx/sites-enabled/default
+        state: link
 
-- name: Update and upgrade apt packages
-  apt: >
-    upgrade=yes
-    update_cache=yes
-    cache_valid_time=3600
-    
-- name: Install common packages
-  action:
-    apt pkg={{ item }} 
-    state=present
-  with_items:
-  - vim
-  - wget
-  - git
-  - curl
-  - tmux
-
-#- name: Autoremove unnecessary packages
-#  command: apt-get -q -y autoremove
-#  register: autoremove_output
-#  changed_when: "'The following packages will be REMOVED' in autoremove_output.stdout"
-
-- name: Check if packages need to be autoremoved
-  command: apt-get --dry-run autoremove
-  register: check_autoremove
-  changed_when: False
-- name: Autoremove unused packages
-  command: apt-get -y autoremove
-  when: "'packages will be REMOVED' in check_autoremove.stdout"
-  environment: 
-    DEBIAN_FRONTEND=noninteractive  
-
-- name: Enable welcome message
-  replace:
-    dest=/etc/ssh/sshd_config
-    regexp='^#Banner none'
-    replace='Banner /etc/issue.net'
-    backup=yes
-    
-- name: Set welcome message
+- name: Set start-up and teardown script for use with systemctl
   template:
-    src=welcome_message.j2
-    dest=/etc/issue.net    
+    src=default.j2
+    dest=/etc/systemd/system/default.target.wants/ollama.service    
     backup=yes
-  notify: restart ssh
+
+- name: Set landing page
+  template:
+    src=index.html.j2
+    dest=/var/www/html/index.html   
+    backup=yes
+
+- name: Restart Nginx
+      service:
+        name: nginx
+        state: restarted
