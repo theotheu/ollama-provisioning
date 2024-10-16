@@ -5,3 +5,13 @@
 
 - name: Install Llama3
   ansible.builtin.shell: sh ./install.sh
+
+- name: Pull model Llama3
+  ansible.builtin.shell: ollama pull llama3:8b
+
+- name: Set start-up and teardown script for use with systemctl
+  template:
+    src=ollama.service.j2
+    dest=/etc//systemd/system/default.target.wants/ollama.service    
+    backup=yes
+  notify: systemctl restart ollama.service 

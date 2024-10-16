@@ -1,0 +1,20 @@
+[Unit]
+Description=Ollama Service
+After=network-online.target
+
+[Service]
+ExecStart=/usr/local/bin/ollama serve
+User=ollama
+Group=ollama
+Restart=always
+RestartSec=3
+Environment="PATH=/root/code/pyenv_ansible/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin"
+
+[Install]
+WantedBy=default.target
+
+# add [OLLAMA_HOST] variable
+# to listen all, specify [0.0.0.0]
+# to listen internal network, specify internal IP address
+[Service]
+Environment="OLLAMA_HOST=0.0.0.0"
