@@ -11,6 +11,10 @@ See README in vagrant directory and ansible directory.
 
 `wget -qO- https://raw.githubusercontent.com/theotheu/ollama-provisioning/master/run.sh | bash`
 
+## nginx
+https://medium.com/@JleeCloudEngineer/how-to-install-nginx-using-ansible-playbook-on-ubuntu-vm-to-display-custom-html-page-fe8e7be4b1bc
+
+
 ## Ollama
 https://www.server-world.info/en/note?os=Ubuntu_22.04&p=ollama&f=1
 

@@ -8,13 +8,8 @@
 #####################
 
 # The name of the OS user (johndoe, ubuntu, vagrant)
-username: vagrant
-password: '$6$rounds=100000$vcEVMb1oJOPHy6ui$PTnvifu.xDG8cez.FBusjI18nwe9J/Hyms/IRgXSlsJwyGgSkEHEKRs658A8Lb7DzT6fSVF6Hh4aLolauXWm81'
-
 webdev_password: '$6$rounds=100000$vcEVMb1oJOPHy6ui$PTnvifu.xDG8cez.FBusjI18nwe9J/Hyms/IRgXSlsJwyGgSkEHEKRs658A8Lb7DzT6fSVF6Hh4aLolauXWm81'
 
-# MySQL root password
-mysql_password: PASSWORD
 
 # Timezone
 server_timezone: Europe/Amsterdam
