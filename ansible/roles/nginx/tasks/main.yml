@@ -31,11 +31,11 @@
 #         name: nginx
 #         state: present
 
-- name: Enable default Nginx website
-      file:
-        src: /etc/nginx/sites-available/default
-        path: /etc/nginx/sites-enabled/default
-        state: link
+# - name: Enable default Nginx website
+#       file:
+#         src: /etc/nginx/sites-available/default
+#         path: /etc/nginx/sites-enabled/default
+#         state: link
 
 - name: Set start-up and teardown script for use with systemctl
   template:
