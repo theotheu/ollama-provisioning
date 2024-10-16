@@ -10,7 +10,6 @@
 # The name of the OS user (johndoe, ubuntu, vagrant)
 webdev_password: '$6$rounds=100000$vcEVMb1oJOPHy6ui$PTnvifu.xDG8cez.FBusjI18nwe9J/Hyms/IRgXSlsJwyGgSkEHEKRs658A8Lb7DzT6fSVF6Hh4aLolauXWm81'
 
-
 # Timezone
 server_timezone: Europe/Amsterdam
 
@@ -19,6 +18,7 @@ locale: en_US.UTF-8
 
 # Ollama model
 model: llama3:8b
+
 
 #####################
 #
