@@ -1,4 +1,4 @@
 ---
 
-- name: Install Llama
+- name: Install Llama3
   ansible.builtin.shell: wget https://ollama.ai/install.sh
