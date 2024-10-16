@@ -37,16 +37,10 @@
     path: /etc/nginx/sites-enabled/default
     state: link
 
-- name: Set start-up and teardown script for use with systemctl
-  template:
-    src=default.j2
-    dest=/etc/systemd/system/default.target.wants/ollama.service    
-    backup=yes
-
 - name: Set landing page
   template:
     src=index.html.j2
-    dest=/var/www/html/index.html   
+    dest=/var/www/html/index.nginx-debian.html
     backup=yes
 
 - name: Restart Nginx
