@@ -31,25 +31,25 @@
 #         name: nginx
 #         state: present
 
-# - name: Enable default Nginx website
-#       file:
-#         src: /etc/nginx/sites-available/default
-#         path: /etc/nginx/sites-enabled/default
-#         state: link
+- name: Enable default Nginx website
+      file:
+        src: /etc/nginx/sites-available/default
+        path: /etc/nginx/sites-enabled/default
+        state: link
 
-# - name: Set start-up and teardown script for use with systemctl
-#   template:
-#     src=default.j2
-#     dest=/etc/systemd/system/default.target.wants/ollama.service    
-#     backup=yes
+- name: Set start-up and teardown script for use with systemctl
+  template:
+    src=default.j2
+    dest=/etc/systemd/system/default.target.wants/ollama.service    
+    backup=yes
 
-# - name: Set landing page
-#   template:
-#     src=index.html.j2
-#     dest=/var/www/html/index.html   
-#     backup=yes
+- name: Set landing page
+  template:
+    src=index.html.j2
+    dest=/var/www/html/index.html   
+    backup=yes
 
-# - name: Restart Nginx
-#       service:
-#         name: nginx
-#         state: restarted
+- name: Restart Nginx
+      service:
+        name: nginx
+        state: restarted
