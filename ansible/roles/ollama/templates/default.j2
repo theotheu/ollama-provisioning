@@ -1,0 +1,23 @@
+server {
+        root /var/www/html;
+        index index.html index.htm index.nginx-debian.html;
+        server_name surf.tezzt.nl;
+        location / {
+                try_files $uri $uri/ =404;
+        }
+}
+
+server {
+    listen 80;
+    server_name surf.tezzt.nl;  # Replace with your domain or IP
+    location / {
+        proxy_pass http://localhost:11434;
+        proxy_set_header Host localhost:11434;
+    }
+}
+
+server {
+        listen 80 default_server;
+        listen [::]:80 default_server;
+}
+
