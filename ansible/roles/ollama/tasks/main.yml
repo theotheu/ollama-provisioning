@@ -6,8 +6,8 @@
 - name: Install Llama3
   ansible.builtin.shell: sh ./install.sh
 
-- name: Pull model Llama3
-  ansible.builtin.shell: ollama pull llama3:8b
+# - name: Pull model Llama3
+#   ansible.builtin.shell: ollama pull llama3:8b
 
 - name: Set start-up and teardown script for use with systemctl
   template:
