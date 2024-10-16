@@ -1,10 +1,10 @@
 ---
 
-- name: Download Llama3
-  ansible.builtin.shell: wget https://ollama.ai/install.sh
+# - name: Download Llama3
+#   ansible.builtin.shell: wget https://ollama.ai/install.sh
 
-- name: Install Llama3
-  ansible.builtin.shell: sh ./install.sh
+# - name: Install Llama3
+#   ansible.builtin.shell: sh ./install.sh
 
 # - name: Pull model Llama3
 #   ansible.builtin.shell: ollama pull llama3:8b

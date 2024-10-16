@@ -7,7 +7,7 @@ CODE=code
 
 timedatectl set-timezone Europe/Amsterdam
 
-T=21:21
+T=21:28
 
 echo "##### --- ${T}"
 rm -fr ${CODE}
