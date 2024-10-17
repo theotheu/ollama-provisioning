@@ -1,9 +1,16 @@
 ---
 
-- command: apt install certbot -y
+- name: "Installing certbot"
+  command: apt install certbot -y
   environment:
     DEBIAN_FRONTEND: noninteractive
 
-- command: apt install python3-certbot-nginx -y
+- name: "Installing python3-certbot-nginx"
+  command: apt install python3-certbot-nginx -y
   environment:
     DEBIAN_FRONTEND: noninteractive    
+
+- name: "Obtaining certificate"
+  command: certbot --nginx -d {{ domain_name }}
+  environment:
+    DEBIAN_FRONTEND: noninteractive        
