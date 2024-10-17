@@ -19,6 +19,8 @@ locale: en_US.UTF-8
 # Ollama model
 model: llama3:8b
 
+# Domain
+model: node45.tezzt.nl
 
 #####################
 #

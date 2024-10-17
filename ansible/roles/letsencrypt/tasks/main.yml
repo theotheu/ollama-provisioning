@@ -1,0 +1,9 @@
+---
+
+- command: apt install certbot -y
+  environment:
+    DEBIAN_FRONTEND: noninteractive
+
+- command: apt install python3-certbot-nginx -y
+  environment:
+    DEBIAN_FRONTEND: noninteractive    
