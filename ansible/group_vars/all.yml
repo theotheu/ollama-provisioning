@@ -20,7 +20,7 @@ locale: en_US.UTF-8
 model: llama3:8b
 
 # Domain
-model: node45.tezzt.nl
+domain_name: node45.tezzt.nl
 
 #####################
 #
